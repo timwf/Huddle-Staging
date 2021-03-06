@@ -1,0 +1,122 @@
+.subscription-module{
+
+  &__inner{
+
+    h1{
+      font-size: 28px;
+      margin-top: 15px;;
+      margin-left: 20px;
+
+      @include respond-to(md){
+        margin-left: calc(52% + 100px);
+      }
+
+      @include respond-to(xl){
+        font-size: 34px;
+      }
+    }
+
+    h1:before{
+      content: "";
+      display: block;
+      border-top: solid red;
+      width: 40px;
+      border-width: 1px;
+      position: relative;
+      top: -16px;;
+    }
+  }
+
+  &__blocks-wrap{
+    margin-top: 50px;
+
+    @include respond-to(md){
+      display: flex;
+      margin-top: 98px;
+    }
+  }
+
+  &__block:hover{
+    background-color: red;
+
+    h1{
+      color: white;
+    }
+
+    p{
+      color: white;
+    }
+    .btn{
+      .btn-arrow{
+
+        line{
+          stroke: white;
+        }  
+        path{
+          stroke: white;
+        }
+      }
+    }
+  }
+
+  &__block{
+    background-color: #F2F3F4;
+    padding-top: calc(100% - 40px);
+    position: relative;
+    margin-bottom: 20px;;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    transition: 0.4s;
+
+    @include respond-to(md){
+      width: 100%;
+      margin-left: 0;
+      }
+
+    @include respond-to(md){
+    width: 26%;
+    padding-top: 26%;
+    margin-right: 50px;
+    margin-bottom: 0px;
+    }
+
+    h1{
+      margin-left: 10%;
+    }
+
+    p{
+      margin-left: 10%;
+      font-size: 18px;;
+
+      @include respond-to(xl){
+        font-size: 20px;;
+        }
+    }
+
+    h1:before{
+      display: none;
+    }
+  }
+
+  &__block-inner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 40px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include respond-to(md){
+      width: 100%;
+      margin-left: 0;
+      }
+
+    .btn{
+      position: absolute;
+      bottom: 10%;;
+      left: 10%;
+    }
+  }
+}

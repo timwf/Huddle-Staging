@@ -1,0 +1,70 @@
+//similar to news carousel && main section contact! - 
+//consider amending both css files if you make changes
+
+.main-section-text{
+  position: relative;
+
+  &__inner{
+    @include respond-to(sm){
+      display: flex;
+    }
+  }
+
+  &__left{
+    @include respond-to(sm){
+      width: 50%;
+    }
+    
+    p{
+
+      @include respond-to(sm){
+        position: absolute;
+        top: 0px;
+      }
+    }
+
+    h1{
+      margin-top: 60px;
+      max-width: 574px;
+      padding-right: 40px;
+      font-size: 28px;
+
+      @include respond-to(sm){
+        margin-top: 100px;
+        font-size: 34px;
+      }
+    }
+
+    h1:before{
+      content: "";
+      display: block;
+      width: 420px;
+      border-width: medium 1px 1px;
+      border-top: 1px solid red;
+      position: relative;
+      top: -16px;
+      right: 377px;
+    }
+  }
+
+  &__right{
+
+    @include respond-to(sm){
+      width: 50%;
+    }
+
+    p{
+      margin-top: 76px;
+      margin-bottom: 37px;
+      font-size: 18px;
+
+      @include respond-to(sm){
+        margin-top: 100px;  
+        margin-bottom: 80px;
+        font-size: 20px;
+      }
+    }
+  }   
+}
+
+

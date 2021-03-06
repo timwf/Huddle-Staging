@@ -1,0 +1,438 @@
+//similar to "Main section text" - 
+//consider amending both css files if you make changes
+
+.news-carousel{
+  position: relative;
+
+  &__inner{
+    @include respond-to(sm){
+      display: flex;
+    }
+  }
+
+  &__left{
+    @include respond-to(sm){
+      width: 50%;
+    }
+    
+    p{
+      font-size: 14px;
+
+      @include respond-to(sm){
+        position: absolute;
+        top: 0px;
+      }
+    }
+
+    h1{
+      margin-top: 60px;
+      max-width: 574px;
+      padding-right: 20px;
+      font-size: 28px;
+
+      @include respond-to(sm){
+        margin-top: 100px;
+        font-size: 34px;
+      }
+    }
+
+    h1:before{
+      content: "";
+      display: block;
+      width: 420px;
+      border-width: medium 1px 1px;
+      border-top: 1px solid red;
+      position: relative;
+      top: -16px;
+      right: 377px;
+    }
+  }
+
+  &__right{
+
+    @include respond-to(sm){
+      width: 50%;
+    }
+
+    p{
+      font-size: 18px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+
+      @include respond-to(sm){
+        margin-top: 100px;  
+        margin-bottom: 110px;
+        font-size: 20px;
+      }
+    }
+  }
+  
+  &__slide-container{
+    margin-bottom: 82px;
+
+    @include respond-to(sm){
+      margin-bottom: 0px;
+    }
+  }
+
+  &__buttons{
+    margin-top: 65px;
+    display: none;
+
+    @include respond-to(sm){
+      margin-top: 120px;;
+      display: flex;
+    }
+  }
+
+  svg{
+    margin-right: 11px;
+  }
+
+  svg:hover{
+    cursor: pointer;
+  }
+
+  svg:hover:first-child{
+    #Group_22{
+      path{
+        transition: 0.2s;
+        transform: translateX(-20.186px);
+        // stroke-width: 3.5px;
+        opacity: 0.8;
+      }
+    }
+  }
+
+  svg:hover:last-child{
+    #Group_22{
+      path{
+        transition: 0.2s;
+        transform: translateX(-20.186px);
+        opacity: 0.8;
+
+      }
+    }
+  }  
+}
+
+
+
+.news-carousel__slide-img{
+  position: relative;
+  transition: 0.3s;
+
+  img{
+    object-fit: cover;
+    width: 70vw;
+    height: 70vw;
+
+    @include respond-to(sm){
+      width: 386px;
+      height: 386px;
+    }
+
+
+    @include respond-to(md){
+      width: 286px;
+      height: 286px;
+    }
+
+    @include respond-to(lg){
+      width: 361px;
+      height: 361px;
+    }
+
+    @include respond-to(xl){
+      width: 424px;
+      height: 424px;
+    }
+  }
+}
+
+.slick-current{
+  .news-carousel__slide-img-overlay{
+    opacity: 1;
+    @media (min-width: 900px){
+
+      
+    }
+  }
+}
+
+
+.news-carousel__slide-img:hover{
+  .news-carousel__slide-img-overlay{
+    opacity: 1;
+  }
+}
+
+.news-carousel__slide-img-overlay{
+  transition: 0.5s;
+
+  position: absolute;
+  width: 70%;
+  background-color: #ffffff0f;
+  backdrop-filter: blur(30px);
+  bottom: 7%;
+  margin-left: 7%;
+
+  @media (min-width: 380px){
+    bottom: 10%;
+    margin-left: 10%;
+  }
+
+
+  p{
+    font-size: 10px;
+    color: white;
+    margin-left: 10%;;
+    margin-top: 20px;
+
+    @include respond-to(sm){
+      font-size: 14px;
+    }
+  }
+
+  h2{
+    color: white;
+    margin-left: 10%;;
+    margin-bottom: 20%;
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 5px;;
+
+    @include respond-to(sm){
+      font-size: 20px;
+    }
+  }
+
+  .btn{
+    margin-left: 10%;
+    margin-bottom: 5%;
+  }
+}
+
+
+.news-carousel__slider-wrapper{
+margin-left: 19.8%;
+margin-top: 54px;;
+position: relative;
+
+@media (min-width: 1624px){
+    margin-left: 32.5%;
+  }
+}
+
+.news-carousel__range-slider{
+  position: absolute;
+  bottom: -49px;
+  left: calc(-19.8% + 26px);
+  width: 87%;
+
+  @include respond-to(sm){
+    top: -82px;
+    left: 0;
+    width: auto;
+  }
+}
+
+.news-carousel__range-counter{
+  display: none;
+  position: absolute;
+  // display: flex;
+  left: 110%;
+  top: 0px;
+
+  .range__current{
+    color: red;
+  }
+}
+
+.slides-dragged{
+  transform: scale(0.9);
+}
+
+
+
+/* slick mods */
+
+.news-carousel__slider-wrapper{
+  .slick-slide {
+    margin-right: 24px;
+
+    @include respond-to(sm){
+      margin-left:47px;
+      margin-right: 0;
+      outline: none
+    }
+  }
+  
+  .slick-slide:hover {
+    @include respond-to(sm){
+      margin-left:47px;
+      outline: none;
+      cursor: pointer;
+    }
+
+  }
+  
+  .slick-dots{
+    display: none !important;
+  }
+  
+  
+  .slick-list {
+    margin-left:-47px;
+    padding:0 29% 0 0;
+    max-height: 70vw;
+
+    @include respond-to(sm){
+      max-height: none;
+    }
+  }
+}
+
+
+
+
+/* slider mods */
+
+input:focus, textarea:focus, select:focus{
+  outline: none;   
+}
+
+input[type='range']::-moz-focus-outer { border: 0; }
+
+*:focus {
+  outline: none;
+}
+
+
+
+/*Chrome*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  input[type='range'] {
+
+    -webkit-appearance: none;
+    background-color: #000000;
+    height: 1px;
+    width: 76vw;
+
+    @include respond-to(sm){
+      width: 26.5vw;
+    }
+
+    @media (min-width: 1624px){
+      width: 15vw;
+    }
+  }
+  
+
+  input[type=range]::-moz-focus-outer {
+    border: 0;
+    outline: none;
+}
+
+input[type=range]:focus {
+  outline: none;
+  border: 0;
+}
+  
+  input[type='range']::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    height: 17px;
+    -webkit-appearance: none;
+    outline: none;
+    color: #13bba4;
+    margin-top: -16px;
+    margin-left: -15px;
+    margin-right: -15px;;
+  }
+
+
+  
+  input[type='range']::-webkit-slider-thumb {
+    width: 34px;
+    -webkit-appearance: none;
+    height: 34px;
+    cursor: pointer;
+    outline: none;
+    -webkit-appearance: none;
+    background: url('../img/slider-thumb.svg');
+  }
+
+  input[type='range']::-moz-range-thumb{
+    width: 34px;
+    appearance: none;
+    height: 34px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: url('../img/slider-thumb.svg');
+  }
+
+}
+/** FF*/
+input[type="range"]::-moz-range-progress {
+background-color:none; 
+}
+input[type="range"]::-moz-range-track {  
+  -webkit-appearance: none;
+  height: 17px;
+  -webkit-appearance: none;
+  color: #13bba4;
+  margin-top: -16px;
+  margin-left: -15px;
+  margin-right: -15px;;
+}
+/* IE*/
+input[type="range"]::-ms-fill-lower {
+background-color: #43e5f7; 
+}
+input[type="range"]::-ms-fill-upper {  
+background-color: transparent;
+}
+
+@-moz-document url-prefix() { 
+  .news-carousel__slide-img-overlay{
+    box-shadow: 5px 0 24px rgba(4,4,4,.53);
+    background-color: rgba(9, 9, 9, 0.47);
+  }
+}
+
+
+
+
+
+
+
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  // width: 100%; /* Specific width is required for Firefox. */
+
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 0;
+  border-radius: 0;
+  border-color: transparent;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  // width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
+}
+
+
+

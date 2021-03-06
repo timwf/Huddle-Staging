@@ -1,0 +1,370 @@
+.page-footer{
+  a{
+    color: white;
+  }
+
+  a:hover{
+    li:after{
+      width: 100%;
+    }
+  }
+
+  li{
+    width: fit-content;
+  }
+
+  li:after{
+    content: "";
+    display: block;
+    border-bottom: solid white;
+    border-width: 1px;
+    position: relative;
+    top: 4px;
+    width: 0%;
+    transition: 0.4s;
+  }
+}
+
+.page-footer-fullscreen{
+  transition: 0.4s;
+  width: 100%;
+  background-color: red;
+  z-index: 9;
+  overflow: hidden;
+  
+  @include respond-to(lg){
+    overflow-y: hidden;
+  }
+
+  &__inner{
+    position: relative;
+
+    img{
+      padding-top: 40px;
+
+      @include respond-to(xl){
+        padding-top: 60px;
+      }
+    }
+  }
+
+  &__text-inner{
+    position: relative;
+    left: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+
+    @include respond-to(lg){
+      padding-left: 45px;
+      padding-right: 45px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+  }
+
+  &__text-wrap{
+    display: block;
+
+    margin-left: 50%;
+    transform: translateX(-50%);
+
+    @include respond-to(lg){
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      margin-left: 0;
+      transform: translateX(0%);      
+      padding-top: 128px;
+      padding-bottom: 70px;
+    }
+  }
+
+  &__col-one{
+    display: flex;
+    padding-bottom: 50px;
+
+
+    @include respond-to(lg){
+      width: 23%;
+      justify-content: space-between;
+      padding-bottom: 0px;
+      position: relative;
+    }
+
+    h1{
+      color: white;
+      font-size: 20px;
+      margin-bottom: 28px;
+
+      @include respond-to(sm){
+      }
+    }
+    
+    h1:before{
+      content: "";
+      display: block;
+      width: 18px;
+      border-width: medium 1px 1px;
+      border-top: 1px solid white;
+      position: relative;
+      top: -16px;
+    }
+  }
+
+  &__sports{
+    color: white;
+    width: 150px;
+
+    li{
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__solution{
+    color: white;
+
+    li{
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__col-two{
+    display: flex;
+    padding-bottom: 50px;
+
+    @include respond-to(lg){
+      width: 40%;
+      justify-content: space-between;
+      padding-bottom: 0px;
+      height: 550px;
+    }
+
+    li{
+      font-size: 20px;
+      color: white;
+      padding-bottom: 20px;
+    }
+
+
+  }
+
+  &__pages{
+    min-width: 150px;
+
+    @include respond-to(lg){
+      min-width: 207px;
+      border-right: solid white;
+      border-width: 1px;
+    }
+  }
+
+  &__locations{
+    max-width: 205px;
+
+    @include respond-to(lg){
+      margin-left: 115px;
+    }
+
+    h4{
+      font-size: 20px;
+      color: white;
+      margin-bottom: 28px;
+    }
+
+    h4:before{
+      content: "";
+      display: block;
+      width: 18px;
+      border-width: medium 1px 1px;
+      border-top: 1px solid white;
+      position: relative;
+      top: -16px;
+    }
+
+    p{
+      font-size: 14px;
+      color: white;
+      margin-bottom: 28px;      
+    }
+
+    span{
+      font-size: 10px;
+    }
+  }
+
+  &__col-three{
+    display: flex;
+    align-items: baseline;
+    margin-top: -42px;
+    margin-bottom: 50px;
+
+    @include respond-to(lg){
+      display: block;
+      position: relative;
+      margin-top: 0px;
+      margin-bottom: 0px;
+
+    }
+    
+    h4{
+      margin-bottom: -33px;
+      font-size: 20px;
+      color: white;
+      margin-bottom: 28px;
+      min-width: 150px;      
+    }
+
+    h4:before{
+      content: "";
+      display: block;
+      width: 18px;
+      border-width: medium 1px 1px;
+      border-top: 1px solid white;
+      position: relative;
+      top: -16px;
+    }
+  }
+
+  &__social-images{
+    display: flex;
+    flex-wrap: wrap;
+
+    img{
+      margin-right: 6px;
+      height: 200;
+      width: 36px;
+      transition: 0.4s;
+      padding-top: 6px;
+    }
+
+    img:hover{
+      opacity: 0.6;
+    }
+  }  
+}
+
+#menu-pages-1{
+  li:first-child:before{
+      content: "";
+      display: block;
+      width: 18px;
+      border-width: medium 1px 1px;
+      border-top: 1px solid white;
+      position: relative;
+      top: -16px;
+    }
+  }
+
+.footer-logo{
+  display: none;
+
+  @include respond-to(lg){
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+}
+
+.footer-footnote{
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+
+  color: white;
+  font-size: 12px;
+
+  @include respond-to(lg){
+    bottom: 0;
+    width: 200%;
+  }
+}
+
+.cursor{
+  mix-blend-mode: var(--cursor-mode);
+    user-select: none;
+    pointer-events: none;
+    z-index: 10000;
+    position: fixed;
+    top: -10px;
+    left: -10px;
+    width: 10px;
+    height: 10px;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../img/circle-red.svg');
+    transform: translate(-50%, -50%);
+    transition: width .3s, height .3s, opacity .3s;
+}
+
+.cursor.active{
+  width: 46px;
+  height: 46px; 
+}
+
+.clickable:hover{
+  cursor: pointer;
+}
+
+.cursor.drag{
+  background-image: url('../img/drag.svg');
+  height: 100px;
+  width: 100px;
+}
+
+.spinner-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  z-index: 9999;
+}
+
+.spinner {
+  -webkit-animation: spinner 1s ease-in-out infinite;
+  animation: spinner 4s ease-in-out infinite;
+  z-index: 99999;
+  pointer-events: none;
+  z-index: 9999;
+  position: fixed;
+  top: calc(50% - 20px);
+  left: calc(50% - 20px);
+  display: flex;
+}
+
+.spinner-left{
+  height: 30px;
+  width: 15px;
+  border-bottom-right-radius: 100px;
+  border-top-right-radius: 100px;
+  background-color: red;
+}
+
+.spinner-right{
+  height: 30px;
+  width: 15px;
+  border-bottom-left-radius: 100px;
+  border-top-left-radius: 100px;
+  background-color: #0A1C2B;;
+}
+
+@keyframes spinner {
+  0%   {transform: rotate(0deg); opacity: 0;}
+  75%  {transform: rotate(1080deg); opacity: 1;}
+  100%  {transform: rotate(1080deg);opacity: 0}
+}
+
+

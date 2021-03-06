@@ -1,0 +1,73 @@
+.map-right{
+  position: relative;
+
+  &__inner{
+    @include respond-to(md){
+      display: flex;
+      height: auto;
+      padding-bottom: 50px;
+    }
+  }  
+
+  &__left{
+    padding-bottom: 60px;
+
+    @include respond-to(md){
+      width: 40%;
+      padding-bottom: 0;
+    }
+
+
+    h1{
+      font-size: 18px;
+      margin-top: 15px;
+      padding-bottom: 30px;
+
+      @include respond-to(md){
+        font-size: 20px;
+      }
+    }
+
+    p{
+      font-size: 14px;
+      padding-bottom: 30px;
+      max-width: 210px;
+    }
+
+    h1:before{
+      content: "";
+    display: block;
+    width: 40px;
+    border-width: medium 1px 1px;
+    border-top: 1px solid red;
+    position: relative;
+    top: -16px;
+    }
+  }
+  
+  &__right{
+    margin-left: -20px;
+    width: calc(100% + 40px);
+
+    @include respond-to(md){
+      margin-left: 0;
+      position: absolute;
+      width: 60%;
+      height: -webkit-fill-available;
+      right: 0;
+    }
+  }
+
+  &__container{
+    height: 100vw;
+
+    @include respond-to(md){
+      height: 100%;
+    }
+
+    iframe{
+      width: 100%;
+      height: 100%;
+    }    
+  }
+}

@@ -1,0 +1,168 @@
+.featured-news{
+  position: relative;
+
+  &__inner{
+
+    @include respond-to(md){
+      display: flex;
+      justify-content: space-between;
+      min-height: 700px;
+    }
+  }
+
+  &__text-wrap{
+    padding-top: 490px;
+
+    @include respond-to(sm){
+      padding-top: 790px;
+    }
+
+    @include respond-to(md){
+      padding-top: 0;
+      width: calc(44% - 50px);
+      max-width: 542px;
+      margin-top: 0px;;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+
+    h1{
+      margin-bottom: 40px;
+      font-size: 28px;
+
+      @include respond-to(md){
+        font-size: 34px;
+      }
+    }
+    
+    h2{
+      margin-bottom: 30px;
+      color: red;
+      font-weight: 400;
+      font-size: 28px;
+      margin-bottom: 100px;
+
+      span{
+        color: #CBCBCB;
+        margin-left: 5px;
+      }
+    }
+
+    h1:before{
+      content: "";
+      display: block;
+      border-top: solid red;
+      width: 40px;
+      border-width: 1px;
+      position: relative;
+      top: -16px;;
+    }
+
+    p{
+      margin-bottom: 22px;
+    }
+
+    .btn{
+      margin-top: 67px;
+      margin-bottom: 28px;
+
+    }
+  }
+
+  &__slide-img{
+    .btn{
+      bottom: 23px;
+      right: 28px;
+      position: absolute;
+
+      .btn-crc-left{
+        path{
+          stroke: white;
+        }
+      }
+      
+      .btn-crc-right{
+        path{
+          stroke: white;
+        }
+      }
+    }
+  }
+
+  &__details{
+    display: flex;
+    position: relative;
+    margin-top: 76px;
+
+    img{
+      border-radius: 50%;
+      height: 64px;
+      width: 64px;
+    }
+  }
+
+  &__details:before{
+    position: absolute;
+    content: "";
+    display: block;
+    border-top: solid red;
+    width: 64px;
+    top: -44px;
+    border-width: 1px;
+  }
+
+  &__details--name{
+    margin-left: 27px;
+
+    h4{
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-top: 13px;
+      color: black;
+    }
+
+    p{
+      font-size: 12px;
+      color: #C4C4C4;
+      margin: 0px !important;
+    }
+  }
+
+  &__image{
+
+    @include respond-to(md){  
+      position: absolute;
+      left: 0;
+      display: flex;
+      height: 100%;
+      width: calc(50% - 45px);
+    }
+
+    @include respond-to(xl){
+      width: calc(44% - 14px);
+    }
+
+    img{
+      width: 100%;
+      object-fit: cover;
+      height: 400px;
+
+      @include respond-to(sm){
+        height: 700px;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+

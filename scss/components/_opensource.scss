@@ -1,0 +1,63 @@
+.opensource{
+  background-color: #030303;
+  height: 119px;
+
+  &__inner{
+    h1{
+      margin-top: 53px;
+    }
+  }
+
+  &__tables{
+    margin-top: 53px;
+
+    @include respond-to(md){
+      display: flex;
+    }
+
+
+
+    table{
+      border-collapse: collapse;
+      border: 1px solid #ddd;
+    }
+
+    td{
+      border-right: none;
+      border-top: 1px solid #ddd;
+    }
+
+    
+    tr, th{
+      text-align: left;
+    }
+
+    th, td{
+      padding: 8px 29px;
+    }
+  }  
+}
+
+.first{
+  width: 50%;
+  margin: auto;
+
+  @include respond-to(md){
+    margin: 0;
+    margin-right: 50px;
+  }
+
+
+}
+
+.second{
+  width: 50%;
+  margin: auto;
+
+  @include respond-to(md){
+    margin: 0;
+    margin-left: 50px;
+  }
+
+}
+

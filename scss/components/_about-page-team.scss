@@ -1,0 +1,163 @@
+.about-page-team__accordion-item:hover{
+  cursor: pointer;
+}
+
+.about-page-team{
+  position: relative;
+
+  &__inner{
+    @include respond-to(sm){
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__text-wrap-left{
+    margin-bottom: 100px;
+
+    @include respond-to(sm){
+      width: calc(50% - 50px);
+      max-width: 542px;
+      height: auto;
+    }
+
+    h1{
+      padding-top: 16px;
+      padding-bottom: 40px;
+      font-size: 28px;
+
+      @include respond-to(sm){
+        font-size: 34px;
+      }
+    }
+
+    h1:before{
+      content: "";
+      display: block;
+      border-top: solid red;
+      width: 40px;
+      border-width: 1px;
+      position: relative;
+      top: -16px;;      
+    }
+
+    p{
+      padding-bottom: 12px;
+    }
+  }
+
+
+
+  &__text-wrap-right{
+    width: 100%;
+
+    @include respond-to(sm){
+      height: auto;
+      position: inherit;
+      width: calc(44% - 50px);
+    }
+  }
+
+  &__accordion-item{
+    padding-top: 38px;
+    padding-bottom: 38px;
+    position: relative;
+    max-height: 130px;
+    overflow: hidden;
+    transition: 0.4s;
+  }
+
+  &__accordian-item:hover{
+    cursor: pointer;
+  }
+
+  &__accordion-item--show{
+    transition: 0.4s;
+    max-height: 630px;
+
+    .about-page-team__accordion-item-button{
+      img{
+        transition: 0.4s;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &__accordion-item:after{
+    content: "";
+    display: block;
+    border-bottom: solid #C1C6C9;
+    border-width: 1px;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: calc(100% + 20px);
+  }
+
+  &__accordion-item-show{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 80px;
+  }
+
+  &__accordion-item-brand{
+    img{
+      width: 127px;
+    }
+  }
+
+  &__accordion-item-button{
+    display: flex;
+    align-items: center;
+
+    img{
+      height: 31px;
+      transition: 0.4s;
+    }
+
+    p{
+      padding-right: 32px;
+      text-transform: uppercase;
+      font-size: 10px;
+    }
+  }
+
+  &__accordion-item-button:hover{
+    cursor: pointer;
+
+    p{
+
+      @include respond-to(sm){
+        color: #0a1c2b78;
+      }
+    }
+  }
+
+  &__accordion-item-hidden{
+
+    p{
+      margin-bottom: 20px;;
+    }
+
+    span{
+      color: red;
+    }
+
+    h4{
+      font-size: 18px;
+      font-weight: 400;
+      padding-bottom: 22px;
+    }
+
+    h4:before{
+      content: "";
+      display: block;
+      border-top: solid red;
+      width: 40px;
+      border-width: 1px;
+      position: relative;
+      top: -16px;;
+    }
+  }
+}

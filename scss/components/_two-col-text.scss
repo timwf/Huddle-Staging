@@ -1,0 +1,102 @@
+.two-col-text{
+
+  &__inner{
+    @include respond-to(sm){
+      display: flex;
+      justify-content: space-between;
+    }
+
+    h1{
+      padding-top: 16px;
+      padding-bottom: 47px;
+      font-size: 36px;
+    }
+
+    h1:before{
+      content: "";
+      display: block;
+      border-top: solid red;
+      width: 40px;
+
+      border-width: 1px;
+      position: relative;
+      top: -16px;;
+    }
+
+    h2{
+      font-size: 34px;
+      font-weight: 400;
+      position: relative;
+      color: #0a1c2b;
+      padding-left: 20px;
+      color: #FF0000;
+    }
+
+    h2:before{
+      content: "";
+      display: block;
+      border-left: solid #0A1C2B;
+      position: absolute;
+      height: 100%;
+      border-width: 1px;
+      left: 0px;
+      top: 0;
+    }
+
+    .grey{
+      color: #CBCBCB;
+    }
+
+    span{
+      color: #0a1c2b;
+      font-size: 34px;;
+    }
+
+    .btn{
+      padding-top: 100px;
+    }
+
+    p{
+      padding-bottom: 12px;
+    }
+  }
+
+  &__left-wrap{
+
+    @include respond-to(sm){
+      width: calc(50% - 50px);
+      max-width: 577px;
+    }
+  }
+
+  &__right-wrap{
+
+    margin-top: 80px;
+
+    @include respond-to(sm){
+      margin-top: 0px;
+      width: calc(44% - 50px);
+    }
+  }
+
+  &__right-quote{
+    h1{
+      font-size: 34px;
+      margin-top: 50px;
+    }
+
+    h1:before{
+      content: url(../img/red-quote.svg);
+      display: block;
+      top: -93px;
+      left: 0;
+      font-size: 120px;
+      position: absolute;
+      border-top: none;
+    }
+
+    p{
+      margin-top: 150px;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+.case-study-stats-module{
+
+  &__blocks-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+
+    @include respond-to(sm){
+      width: 100%;
+      margin-left: 0px;
+    }
+  }
+
+  &__block{
+    width: 50%;
+    padding-top: 50%;
+    position: relative;
+
+    @include respond-to(sm){
+      width: 25%;
+      padding-top: 25%;
+    }
+  }
+
+  &__block-text{
+    position: absolute;
+    bottom: 12%;
+    left: 12%;
+
+    h1{
+      font-size: 36px;
+
+      @include respond-to(sm){
+        font-size: 60px;
+      }
+    }
+
+    h2{
+      font-size: 36px;
+
+      @include respond-to(sm){
+        font-size: 60px;
+      }
+    }
+
+    p{
+      font-size: 18px;;
+      font-style: italic;;
+
+      @include respond-to(sm){
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__block-one{
+    background-color: #FF0000;
+    margin-top: -5%;
+    height: 5%;
+
+    h1, p, h2{
+      color: white;
+    }
+  }
+
+  &__block-two{
+    background-color: #0A1C2B;
+
+    h1, p, h2{
+      color: white;
+    }
+  }
+
+  &__block-three{
+    background-color: #F2F3F5;
+    height: 5%;
+
+    @include respond-to(sm){
+      margin-top: -5%;
+    }
+  }
+
+  &__block-four{
+    background-color: #FF0000;
+    margin-top: 5%;
+    
+    h1, p, h2{
+      color: white;
+    }
+
+    @include respond-to(sm){
+      margin-top: 0%;
+    }
+  }
+}

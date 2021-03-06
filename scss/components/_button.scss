@@ -1,0 +1,87 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+.btn{
+  position: relative;
+  display: flex;
+  height: 50px;
+  align-items: center;
+  width: fit-content;
+  padding-right: 101px;
+
+  p{
+    padding: 0 !important;
+    margin: 0 !important;
+    color: #0A1C2B;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    font-size: 10px !important;
+    font-family: dreiviertelfett;
+    letter-spacing: 3px;
+
+    @include respond-to(md){
+      font-size: 12px !important;
+    }
+  }
+}
+
+.btn-ani-wrap{
+  position: relative;
+}
+
+.btn-arrow{
+  position: absolute;
+  top: -7px;
+  left: 34px;
+  transition: 0.5s;
+}
+
+.btn-crc-left{
+  position: absolute;
+  top: -17px;
+  left: 58px;
+}
+
+.btn-crc-right{
+  position: absolute;
+  top: -17px;
+  left: 75px;
+}
+
+.btn:hover{
+  .btn-arrow{
+    left: 75px;
+  }
+  p{
+    color: grey;
+    transition: 0.5s;
+  }
+}
+
+.btn-ani-wrap--dark{
+  p{
+    color: red;
+  }
+  .btn-arrow{
+    line{
+      stroke: white;
+    }
+    path{
+      stroke: white;
+    }
+  }
+
+  .btn-crc-right{
+    path{
+      stroke: red;
+    }
+  }
+
+  .btn-crc-left{
+    path{
+      stroke: red;
+    }
+  }
+}

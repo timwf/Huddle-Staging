@@ -1,0 +1,94 @@
+.sports-animated-list{
+
+  &__inner{
+    @include respond-to(sm){
+      display: flex;
+    }
+  }
+
+  &__left{
+
+    display: none;
+    @include respond-to(lg){
+      display: block;
+      width: 45%;
+    }
+  }
+
+  &__right{
+    margin: auto;
+    @include respond-to(lg){
+      width: 55%;
+    }
+  }
+
+  &__item-container{
+    transition: 0.5s;
+    display: flex;
+    padding: 38px 0px;
+    border-bottom: solid #c1c6c9;
+    border-width: 1px;
+    align-items: center;
+
+    img{
+      height:124px;
+      width: 124px;
+      object-fit: cover;
+
+      @include respond-to(sm){
+        height:200px;
+        width: 200px;
+      }
+    }
+  }
+
+  &__item-text{
+    margin-left: 38px;;
+
+    h1{
+      font-size: 28px;
+
+      @include respond-to(sm){
+        font-size: 28px;
+      }
+    }
+  }
+}
+
+#sports-svg{
+  margin-left: 162px;
+
+  path{
+    transition: 1.8s;
+    stroke-dasharray: 351;
+  }
+  
+  line{
+    transition: 2s;
+  }
+  
+  circle{
+    transition: 0.2s;
+  }
+  
+  .sports-element-svg--arrow{
+      transition: 2s;
+  }
+  
+  .sports-element-svg--dot{
+    animation-name: pulsing;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes pulsing {
+    0%   {r: 6}
+    50%  {r: 4}
+    100% {r: 6}
+  }
+}
+
+
+
+
+

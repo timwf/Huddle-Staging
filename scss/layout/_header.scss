@@ -1,0 +1,388 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+a:after:hover{
+  width: 100%;
+}
+
+.current_page_item:after{
+  width: 100% !important;
+}
+
+.menu-item:hover{
+  &:after{
+    width: 100% !important;
+  }
+}
+
+.menu-item{
+  padding-bottom: 10px;
+}
+
+#menu-pages{
+li:first-child:before{
+    content: "";
+    display: block;
+    width: 18px;
+    border-width: medium 1px 1px;
+    border-top: 1px solid white;
+    position: relative;
+    top: -16px;
+  }
+}
+
+
+.page-header {
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 10px;
+
+  &__logo{
+    img{
+      width: 80px;;
+    }
+  }
+
+
+
+  li{
+    width: fit-content;
+  }
+
+  li:after{
+    content: "";
+    display: block;
+    border-bottom: solid white;
+    border-width: 1px;
+    position: relative;
+    top: 4px;
+    width: 0%;
+    transition: 0.4s;
+  }
+
+
+  @include respond-to(xl){
+    padding-top: 60px;
+  }
+
+  a{
+    color: white;
+  }
+
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__right{
+    display: flex;
+  }
+
+  &__menu-items{      
+    display: none;
+
+    @include respond-to(sm){
+      display: flex;
+      margin-right: 76px;
+    }
+
+
+    button{
+      font-size: 20px;
+      color: white;;
+      display: flex;
+      align-items: center;
+      img{
+        margin-left: 30px;
+        transform: rotate(180deg)
+      }
+    }
+  }
+
+ 
+  &__menu-sub-container{
+    margin-right: 63px;
+    position: relative;
+    top: 36px;
+    opacity: 0;
+    // height: 0px;
+    transition: 0.4s;
+
+    li{
+      padding-bottom: 9px;
+      font-size: 14px;
+    }
+
+    button{
+      color: white;
+    }
+  }  
+}
+
+.active .page-header__menu-sub-container{
+  opacity: 1;
+  height: auto;
+}
+
+.active button{
+  img{
+    transform: rotate(0deg)
+  }
+}
+
+.page-header-fullscreen::-webkit-scrollbar {
+  display: none;
+}
+
+.is-opened .page-header-fullscreen{
+  opacity: 1;
+  transform: translateX(0vw);
+}
+
+.page-header-fullscreen{
+  transition: 0.4s;
+  transform: translateX(-100vw);
+  opacity: 0;
+  position: absolute;
+  min-height: 100vh;
+  width: 100%;
+  background-color: red;
+  top: 0;
+  z-index: 9;
+  height: 100vh;
+  overflow-y: scroll;
+  
+  @include respond-to(md){
+    overflow-y: hidden;
+  }
+
+  &__inner{
+    position: relative;
+
+    img{
+      padding-top: 40px;
+
+      @include respond-to(xl){
+        padding-top: 60px;
+      }
+    }
+  }
+
+  &__text-inner{
+    position: relative;
+    top: -106px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 180px;
+    padding-bottom: 0px;
+
+
+    @include respond-to(md){
+      padding-left: 45px;
+      padding-right: 45px;
+      height: 100vh;
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+  }
+
+  &__text-wrap{
+    display: block;
+
+    margin-left: 50%;
+    transform: translateX(-50%);
+
+    @include respond-to(md){
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-left: 0;
+      transform: translateX(0%);      
+      padding-top: 128px;
+    }
+  }
+
+  &__col-one{
+    display: flex;
+    padding-bottom: 50px;
+
+    @include respond-to(md){
+      width: 33%;
+      justify-content: space-between;
+      padding-bottom: 0px;
+    }
+
+    h1{
+      color: white;
+      font-size: 28px;
+      margin-bottom: 28px;
+
+      @include respond-to(sm){
+        font-size: 34px;
+      }
+    }
+    
+    h1:before{
+      content: "";
+      display: block;
+      width: 18px;
+      border-width: medium 1px 1px;
+      border-top: 1px solid white;
+      position: relative;
+      top: -16px;
+    }
+  }
+
+  &__sports{
+    color: white;
+    width: 150px;
+
+    li{
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__solution{
+    color: white;
+
+    li{
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__col-two{
+    display: flex;
+    padding-bottom: 50px;
+
+    @include respond-to(md){
+      width: 36%;
+      justify-content: space-between;
+      padding-bottom: 0px;
+    }
+
+    li{
+      font-size: 20px;
+      color: white;
+      padding-bottom: 20px;
+    }
+
+
+  }
+
+  &__pages{
+    min-width: 150px;
+  }
+
+  &__locations{
+    max-width: 205px;
+
+    h4{
+      font-size: 20px;
+      color: white;
+      margin-bottom: 28px;
+    }
+
+    h4:before{
+      content: "";
+      display: block;
+      width: 18px;
+      border-width: medium 1px 1px;
+      border-top: 1px solid white;
+      position: relative;
+      top: -16px;
+    }
+
+    p{
+      font-size: 14px;
+      color: white;
+      margin-bottom: 28px;      
+    }
+
+    span{
+      font-size: 10px;
+    }
+  }
+
+  &__col-three{
+    display: flex;
+    align-items: baseline;
+    margin-top: -42px;
+
+    @include respond-to(md){
+      display: block;
+      margin-top: 0px;
+
+    }
+    
+    h4{
+      margin-top: -71px;
+      font-size: 20px;
+      margin-bottom: -33px;
+      color: white;
+      margin-bottom: 28px;
+      min-width: 150px;  
+      
+      @include respond-to(md){
+        margin-top: 0px;
+      }
+    }
+
+    h4:before{
+      content: "";
+      display: block;
+      width: 18px;
+      border-width: medium 1px 1px;
+      border-top: 1px solid white;
+      position: relative;
+      top: -16px;
+    }
+  }
+
+  &__social-images{
+    display: flex;
+    flex-wrap: wrap;
+
+    img{
+      margin-right: 6px;
+      height: 200;
+      width: 36px;
+      transition: 0.4s;
+      padding-top: 6px;
+    }
+
+    img:hover{
+      opacity: 0.6;
+    }
+  }  
+}
+
+.header-footnot-container{
+  display: none;
+
+  @include respond-to(md){
+    display: block;
+    position: relative;
+    margin-top: -193px;
+  }
+}
+
+.header-subnote{
+  position: absolute;
+  bottom: -64px;
+  left: 46px;
+  color: white;
+  font-size: 12px;
+}
+
+.login{
+  margin-left: 35px;
+  margin-right: -22px;
+}

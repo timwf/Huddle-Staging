@@ -1,0 +1,25 @@
+.four{
+
+  background-color: #F2F3F5;
+  z-index: 99;
+  position: relative;
+
+  img{
+    padding-top: 70px;
+  }
+
+  h1{
+    padding-top: 162px;
+
+
+    @include respond-to(sm){
+      max-width: 40%;
+    }
+
+  }
+
+  .btn{
+    padding-top: 80px;
+    padding-bottom: 200px;
+  }
+}

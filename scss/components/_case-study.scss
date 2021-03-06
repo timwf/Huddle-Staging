@@ -1,0 +1,158 @@
+.case-study{
+  position: relative; 
+  background-color: #0A1C2B;
+
+  &__inner{
+    margin-top: 37vw;
+    padding-bottom: 50px;
+
+      @include respond-to(sm){
+      display: flex;
+      justify-content: space-between;
+      margin-top: 350px;
+      padding-bottom: 200px;
+    }
+  }
+
+  &__left{
+
+    @include respond-to(sm){
+      width: calc(50% - 50px);
+      max-width: 542px;
+    }
+
+    p{
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    p:first-child{
+      color: white;
+      padding-top: 83vw;
+      font-size: 14px;
+
+      @include respond-to(sm){
+        padding-top: 483px;
+      }      
+    }
+
+    p:nth-child(3){
+      color: white;
+      padding-top: 50px;
+      padding-bottom: 50px;
+
+      @include respond-to(sm){
+        font-size: 20px;
+      }
+
+      @include respond-to(lg){
+        padding-top: 36px;
+        padding-bottom: 122px;
+      }
+    }
+
+    h1{
+      color: white;
+      margin-top: 50px;
+      font-size: 28px;
+
+      @include respond-to(sm){
+        font-size: 34px;
+      }
+
+      @include respond-to(lg){
+        margin-top: 71px;
+      }
+    }
+
+    h1:before{
+      content: "";
+      display: block;
+      width: 420px;
+      border-width: medium 1px 1px;
+      border-top: 1px solid red;
+      position: relative;
+      top: -16px;
+      right: 377px;
+    }
+  }
+
+  &__right{
+    margin-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+
+    @include respond-to(sm){
+      padding-top: 502px;
+      display: block;
+    }
+
+    @include respond-to(sm){
+      width: calc(50% - 50px);
+      max-width: 577px;
+    }
+
+    img{
+      position: absolute;
+      top: -37vw;
+      width: calc(100% - 40px);
+      margin-left: 20px;
+      right: 0;
+      left: 0px;
+
+      @include respond-to(sm){
+        width: calc(50% - 51px);
+        height: 730px;
+        object-fit: cover;
+        top: -350px;
+        left: auto;
+      }
+
+      @include respond-to(md){
+        width: calc(50% - 51px);
+      }
+
+      @include respond-to(xl){
+        width: calc(50% - 110px);  
+      }
+    }
+
+    h1{
+      color: white;
+      font-size: 36px;
+    }
+
+    h2{
+      color: white;
+      font-size: 36px;
+
+    }
+
+    p{
+      color: white;
+      font-size: 18px;
+      font-style: italic;
+    }
+  }
+
+  &__stat-containet-mobile-right{
+    width: 45%;
+  }
+
+  &__stat-containet-mobile-left{
+    width: 45%;
+  }
+
+  &__stat-container{
+    border-left: solid red;
+    padding-left: 20px;
+    margin-top: 50px;
+    border-width: 1px;
+
+    @include respond-to(sm){
+      margin-top: 20px;;
+      margin-bottom: 50px;;
+    }
+  }
+}

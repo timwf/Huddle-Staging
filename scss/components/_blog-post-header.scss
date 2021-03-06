@@ -1,0 +1,46 @@
+.blog-post-header{
+
+  &__top-section{
+    height: 548px;
+    background: rgb(10,28,43);
+    background: linear-gradient(0deg, rgba(10,28,43,1) 0%, rgba(10,28,43,0.969625350140056) 52%, rgba(58,72,84,1) 100%);
+  }
+
+  &__text-wrap{
+
+    h4{
+      padding-top: 228px;
+      color: #fff;
+      font-weight: 400;
+      font-size: 14px;
+    }
+    h1{
+      padding-top: 89px;
+      color: #fff;
+      font-size: 34px;
+      
+      @include respond-to(sm){
+        width: 60%;
+        font-size: 44px;
+      }
+    }
+
+    h1:before{
+      content: "";
+      display: block;
+      width: 420px;
+      border-width: medium 1px 1px;
+      border-top: 1px solid red;
+      position: relative;
+      top: -16px;
+      right: 377px;
+    }
+  }
+
+  &__image{
+
+    img{
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,131 @@
+.contact-page-form{
+  height: 789px;
+
+  @include respond-to(md){
+    height: 604px;
+  }
+
+  &__inner{
+    @include respond-to(md){
+      display: flex;
+    }
+  }
+
+  &__left{
+    @include respond-to(md){
+      width: 50%;
+    }
+
+    p{
+      max-width: 542px;
+      padding-right: 50px;
+      padding-bottom: 80px;
+
+      @include respond-to(md){
+        scroll-padding-bottom: 0;
+      }
+    }
+
+    h1{
+      font-size: 28px;
+      margin-top: 15px;
+      margin-bottom: 10px;
+
+      @include respond-to(md){
+        font-size: 34px;
+        margin-bottom: 30px;
+      }
+    }
+
+    h1:before{
+      content: "";
+      display: block;
+      width: 40px;
+      border-width: medium 1px 1px;
+      border-top: 1px solid red;
+      position: relative;
+      top: -16px;
+    }
+  }
+
+  &__right{
+    @include respond-to(md){
+      width: 50%;
+    }
+
+    .btn{
+      margin-top: 50px;
+    }    
+  }
+
+  &__form{
+    width: calc(100% - 20px);    
+    position: absolute;
+    right: 0;
+
+    @include respond-to(md){
+      width: 50%;
+    }
+
+    input, select{
+      width: 100%;
+      border: none;
+      border-bottom: solid #C1C6C9;
+      border-width: 1px;
+      padding-top: 26px;
+      padding-bottom: 7px;
+      font-family: leicht;
+      color: #0a1c2b;
+    }  
+    
+    select{
+      padding-top: 13px;
+      padding-bottom: 17px;
+      color: #0a1c2bb0;
+    }
+
+    textarea:focus, input:focus{
+      outline: none;
+    }
+    
+    textarea{
+      width: 100%;
+      border: none;
+      border-bottom: solid #C1C6C9;
+      border-width: 1px;
+      padding-top: 26px;
+      padding-bottom: 7px;
+      height: 174px;
+      font-family: leicht;
+      color: #0a1c2b;
+    }
+
+    textarea::-webkit-input-placeholder {
+      display: block !important;
+    }
+
+    input[type='checkbox'] { 
+      width: fit-content;
+      margin-top: 50px;
+    }
+
+    label{
+      padding-left: 15px;
+      position: relative;
+      top: -2px;
+    }
+    span{
+      color: red;
+    }
+  }
+}
+
+.form-i-am{
+  padding-left: 0 !important;
+  top: 14px !important;
+  color: #0a1c2bb0;
+}
+
+.contact-page-form__row--select{
+  margin-top: 20px;
+}

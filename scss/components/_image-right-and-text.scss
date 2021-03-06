@@ -1,0 +1,190 @@
+.image-right-and-text{
+  position: relative;
+  top: 0;
+
+  &__inner{
+
+    @include respond-to(md){
+      display: flex;
+      justify-content: space-between;
+      min-height: 700px;
+    }
+  }
+
+  &__text-wrap{
+    padding-bottom: 50px;
+
+    @include respond-to(md){
+      padding-bottom: 0px;
+      width: calc(50% - 50px);
+      max-width: 577px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h2{
+      margin-top: 0px;
+      color: red;
+      font-weight: 400;
+      font-size: 28px;
+      padding-bottom: 100px;
+      span{
+        color: #CBCBCB;
+        margin-left: 5px;
+      }
+
+      @include respond-to(md){
+        margin-top: 19px;
+        font-size: 34px;
+      }
+    }
+
+    h1{
+      margin-bottom: 40px;
+      font-size: 28px;
+
+      @include respond-to(md){
+        font-size: 34px;
+      }
+    }
+
+    h1:before{
+      content: "";
+      display: block;
+      border-top: solid red;
+      width: 40px;
+      border-width: 1px;
+      position: relative;
+      top: -16px;;
+    }
+
+    p{
+      margin-bottom: 26px;
+    }
+
+    .btn{
+      margin-top: 39px;
+      margin-bottom: 28px;
+
+      @include respond-to(md){
+        margin-top: 67px;
+        margin-bottom: 13px;
+      }
+    }
+  }
+
+  &__carousel-wrap{
+    margin-left: -20px;
+    width: calc(100% + 40px);
+    bottom: 0;
+
+    @include respond-to(md){
+      position: absolute;
+      left: 0;
+      width: 100%;
+      bottom: 0;      
+    }
+
+    @include respond-to(md){
+      height: auto;
+      position: inherit;
+      width: calc(44% - 50px);
+    }
+  }
+
+  &__carousel{
+
+    @include respond-to(md){  
+      position: absolute;
+      display: flex;
+      height: 100%;
+      width: calc(44% - 45px);
+    }
+
+    @include respond-to(xl){
+      width: calc(44% - 14px);
+    }
+
+    img{
+      width: 100%;
+      object-fit: cover;
+      height: 400px;
+
+      @include respond-to(md){
+        height: 700px;
+      }
+    }
+  }
+}
+
+.image-right-and-text__slide-img--video{
+  width: 100%;
+  overflow: hidden;
+
+  video{
+    height: 400px;
+    margin-left: 50%;
+    transform: translate(-50%);
+
+    @include respond-to(md){
+      height: 700px;
+    }
+  }
+}
+
+.image-right-and-text__slide-img{
+  transition: 0.3s;
+}
+
+.image-right-and-text__slide-img:hover{
+  cursor: pointer;
+}
+
+
+
+
+
+
+//slick mods
+
+.image-right-and-text__carousel-wrap{
+
+  .slick-slide {
+    outline: none
+  }
+
+  .slick-dots{
+    position: absolute;
+    bottom: -63px;
+    display: flex;
+    left: calc(50%);
+    transform: translate(-50%);
+
+    @include respond-to(md){
+      left: calc(50% + 20px);
+    }
+  }
+  
+  
+  .slick-dots li button {
+    background: url(../img/slide-show-inactive.svg);
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    width: 34px;
+    height: 34px;
+  }
+  
+  .slick-active button{
+    background: url(../img/slide-show-active.svg) !important;
+    text-indent: -9999px;
+    background-repeat: no-repeat !important;
+    overflow: hidden;
+  }
+}
+
+
+
+
+

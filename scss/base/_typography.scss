@@ -1,0 +1,26 @@
+/**
+ * Basic typography style for copy text
+ */
+
+html {
+  // This defines what 1 rem is
+  font-size: 62.5%;
+}
+
+body {
+  color: $text-color;
+  font: normal 125% / 1.4 $text-font-stack;
+  font-family: leicht;
+}
+
+h1{
+  font-size: 34px;
+  font-weight: 400;
+  color: #0A1C2B;
+}
+
+p{
+  font-size: 14px;
+  line-height: 1.9;
+  color: #0A1C2B;
+}

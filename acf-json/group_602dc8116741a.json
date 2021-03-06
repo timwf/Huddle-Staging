@@ -1,0 +1,60 @@
+{
+    "key": "group_602dc8116741a",
+    "title": "Block: WYSIWYG",
+    "fields": [
+        {
+            "key": "field_602dc8fa1d85b",
+            "label": "Caution",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "This is to be used on general pages only (for example Privacy Policy, T&Cs etc) - this will give the header a black background and enable the menu to be displayed.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_602dc96ef9586",
+            "label": "Enable header black",
+            "name": "enable_header_black",
+            "type": "true_false",
+            "instructions": "This will turn the header black (will then show list items)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/wysiwyg"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1613613666
+}

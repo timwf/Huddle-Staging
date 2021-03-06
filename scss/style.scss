@@ -1,0 +1,24 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import 'abstracts/variables', 'abstracts/mixins';
+
+// 2. Vendors
+@import 'vendor/normalize', 'vendor/wp-core';
+
+// 3. Base stuff
+@import 'base/base', 'base/fonts', 'base/typography', 'base/helpers';
+
+// 4. Layout-related sections
+@import 'layout/header', 'layout/footer';
+
+// 5. Components
+@import 'components/button', 'components/hamburger', 'components/spacer', 'components/two-col-text', 
+'components/news-carousel', 'components/case-study', 'components/image-right-and-text', 
+'components/image-left-and-text', 'components/main-section-text', 'components/image-quote-divider', 
+'components/main-section-contact-summary','components/subscription-module',
+'components/case-study-stats-module','components/previous-next-page','components/home-page-sports',
+'components/about-page-team', 'components/sports-animated-list', 'components/page-header',
+'components/sports-animated-list-four', 'components/contact-page-form', 'components/map-right',
+'components/map-left', 'components/current-vacancies', 'components/featured-news', 'components/news-feed',
+'components/blog-post-header', 'components/blog-content', 'components/video-full-screen';
