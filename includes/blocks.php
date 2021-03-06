@@ -328,6 +328,28 @@ function theme_acf_blocks_init() {
 			'keywords'			=> array( 'video', 'full' ),
       'mode' 	=> 'edit',
     )); 
+
+    acf_register_block_type(array(
+			'name'				=> 'what-we-do',
+			'title'				=> __('What we do'),
+			'description'		=> __('wysiwyg'),
+      'render_callback'	=> 'theme_acf_block_render_callback',
+      'render_template' => 'templates/blocks/what-we-do.php',
+			'icon'				=> 'align-center',
+			'keywords'			=> array( 'video', 'full' ),
+      'mode' 	=> 'edit',
+    )); 
+
+    acf_register_block_type(array(
+			'name'				=> 'locations',
+			'title'				=> __('locations'),
+			'description'		=> __('wysiwyg'),
+      'render_callback'	=> 'theme_acf_block_render_callback',
+      'render_template' => 'templates/blocks/locations.php',
+			'icon'				=> 'align-center',
+			'keywords'			=> array( 'video', 'full' ),
+      'mode' 	=> 'edit',
+    )); 
     
   }
 }
@@ -370,16 +392,9 @@ function theme_allowed_block_types($allowed_blocks, $post) {
     'acf/video-full-screen',   
     'acf/salesforce',  
     'acf/wysiwyg',  
-    
-
-
-
-    
-
-
-    
- 
-    
+    'acf/what-we-do',  
+    'acf/locations',  
+       
   );
 }
 add_filter('allowed_block_types', 'theme_allowed_block_types', 10, 2);

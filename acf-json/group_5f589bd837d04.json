@@ -3,7 +3,7 @@
     "title": "Block: Spacer",
     "fields": [
         {
-            "key": "field_5f603428adb43",
+            "key": "field_6042de4a4e949",
             "label": "Spacer",
             "name": "",
             "type": "message",
@@ -18,6 +18,109 @@
             "message": "",
             "new_lines": "wpautop",
             "esc_html": 0
+        },
+        {
+            "key": "field_6042d89caa439",
+            "label": "Change spacer height?",
+            "name": "change_spacer_height",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_6042d8adaa43a",
+            "label": "Mobile Height",
+            "name": "mobile_height",
+            "type": "range",
+            "instructions": "Defaults to 100px",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6042d89caa439",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 100,
+            "min": "",
+            "max": 400,
+            "step": "",
+            "prepend": "",
+            "append": "px"
+        },
+        {
+            "key": "field_6042d8f47308a",
+            "label": "Tablet Height",
+            "name": "tablet_height",
+            "type": "range",
+            "instructions": "Defaults to 200px",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6042d89caa439",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 200,
+            "min": "",
+            "max": 400,
+            "step": "",
+            "prepend": "",
+            "append": "px"
+        },
+        {
+            "key": "field_6042d9278e902",
+            "label": "Desktop Height",
+            "name": "desktop_height",
+            "type": "range",
+            "instructions": "Defaults to 250px",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6042d89caa439",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 250,
+            "min": "",
+            "max": 400,
+            "step": "",
+            "prepend": "",
+            "append": "px"
         }
     ],
     "location": [
@@ -35,7 +138,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "This is a spacer",
-    "modified": 1600140346
+    "modified": 1614995035
 }

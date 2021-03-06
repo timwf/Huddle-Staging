@@ -773,6 +773,22 @@ $(document).ready(() => {
     })
   }
 
+  function initWhatWeDo(){
+    console.log('here');
+    const $items = $('.what-we-do__item')
+    
+
+    $items.on('mouseover', function(){
+      $(this).addClass('active')
+      $(this).find('.what-we-do__item-inner').addClass('active')
+    })
+
+    $items.on('mouseout', function(){
+      $(this).removeClass('active')
+      $(this).find('.what-we-do__item-inner').removeClass('active')
+    })
+  }
+
   /* FUNCTION CALLS */
   /* ============= */
   bindEvents();
@@ -789,6 +805,7 @@ $(document).ready(() => {
   initCurrentVacancies();
   loadMorePosts();
   salesforceFormSubmit();
+  initWhatWeDo();
 
   if (isObserver) {
     $('.js-visibility').each((i, el) => {

@@ -1,0 +1,92 @@
+.what-we-do{
+  margin-top: 120px;
+
+  &__inner{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 80px;
+
+    @include respond-to(sm){
+      grid-template-columns: repeat(5, 1fr);
+      grid-row-gap: 0px;
+    }
+  }
+
+  &__item{
+    background-size: cover;
+    background-position: center;
+    background-position-y: 2000px;
+    background-repeat: no-repeat;
+
+    @include respond-to(sm){
+      border-right: solid #0a1c2b17;
+      border-width: 1px;
+    }
+    
+    &:hover{
+      cursor: default;
+    }
+
+    &.active{
+      background-position-y: 0px;
+    }
+  }
+
+  &__item:last-of-type{
+    border: none;
+  }
+
+  &__item-inner{
+    padding: 20px;
+
+    h2{
+      color: #0a1c2b17;
+      font-size: 240px;
+      font-weight: 100;
+      line-height: 0.7;
+      margin-top: 20px;
+
+      @include respond-to(sm){
+        font-size: 140px;
+      }
+
+      @include respond-to(lg){
+        font-size: 240px;
+      }
+    }
+
+    p{
+      width: 100%;
+      border-bottom: solid #0a1c2b17;
+      border-width: 1px;
+      font-size: 34px;
+      color: #0a1c2b17;
+    }
+
+    & .btn{
+      width: 100%;
+      margin-top: 20px;    
+
+      p{
+        display: none;
+      }
+    }    
+
+    & .btn-ani-wrap{
+      position: absolute;
+      left: -32px;
+    }
+
+    &.active{
+
+      h2, p{
+        color: white;
+      }
+
+      & .btn-crc-right path, .btn-crc-left path{
+        stroke: white;
+      }
+    }
+  }
+
+}

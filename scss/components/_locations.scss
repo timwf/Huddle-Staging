@@ -1,0 +1,49 @@
+.main-section-conatct-summary--locations{
+  height: auto;
+
+  p{
+    position: relative;
+    max-width: 338px;
+    margin-top: 36px;
+  }
+
+  h1:before{
+    right: 0;
+    width: 40px;
+  }
+
+  & .main-section-conatct-summary__top-inner{
+    display: block;
+  }
+}
+
+.locations{
+  margin-top: 100px;
+
+  @include respond-to(md){
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  h4{
+    font-size: 20px;
+    font-weight: 200;
+
+    &:before{
+      content: "";
+      display: block;
+      width: 40px;
+      border-width: medium 1px 1px;
+      border-top: 1px solid red;
+      position: relative;
+      top: -16px;
+    }
+  }
+
+  h2{
+    font-size: 84px;
+    font-weight: 200;
+    margin-bottom: 40px;
+  }
+
+}

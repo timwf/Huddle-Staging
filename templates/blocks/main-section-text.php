@@ -13,7 +13,6 @@
     </div>
     <div class="main-section-text__right">
       <p class="js-visibility reveal-slide"><?php echo $copy ?></p>
-      <h1>test</h1>
       <?php if ($button['button_link']): 
         _get_template_part('templates/components/_button', [
           'copy' => $button['button_copy'],
